@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthew & Sapphir's Wedding</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1>Sapphir & Matthew</h1>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#details">Wedding Details</a></li>
+                    <li><a href="#rsvp">RSVP</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#registry">Registry</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="hero-content" alt="Sapphir">
+            <div id="sapphir"></div>
+        </div>
+        <div class="hero-content" alt="Matthew and Sapphir" onerror="this.style.backgroundImage='url(https://via.placeholder.com/1200x600?text=Wedding+Hero+Image)'">
+            <h2>We're Getting Married!</h2>
+            <p>Join us for our special day</p>
+            <p class="date">February 20, 2027</p>
+            <a href="#rsvp" class="cta-button">RSVP Now</a>
+        </div>
+        <div class="hero-content" alt="Matthew">
+            <div id="matthew"></div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>We are thrilled to celebrate our love with you. After 10 years together, we've decided to take the next step and tie the knot.</p>
+                    <p>Our wedding will be anything but tradition with a unique twist, reflecting who we are as a couple.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/couple.jpg" alt="Matthew and Sapphir" onerror="this.src='https://via.placeholder.com/400x300?text=Couple+Photo'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="details" class="details">
+        <div class="container">
+            <h2>Wedding Details</h2>
+            <div class="details-grid">
+                <div class="detail-card">
+                    <h3>Details</h3>
+                    <p><strong>Date:</strong> February 20, 2027</p>
+                    <p><strong>Location:</strong> Hellerby Hall</p>
+                    <p><strong>Dress Code:</strong> Formal Attire</p>
+                </div>
+                <div class="detail-card">
+                    <h3>Arrival Time</h3>
+                    <p><strong>Time:</strong> 10:30 AM</p>
+                </div>
+                <div class="detail-card">
+                    <h3>Ceremony</h3>
+                    <p><strong>Time:</strong> 12:00 PM</p>
+                </div>
+                <div class="detail-card">
+                    <h3>Wedding Breakfast</h3>
+                    <p><strong>Time:</strong> 3:00 PM</p>
+                </div>
+                <div class="detail-card">
+                    <h3>Evening Reception</h3>
+                    <p><strong>Time:</strong> 6:00 PM</p>
+                </div>
+                <div class="detail-card">
+                    <h3>Buffet</h3>
+                    <p><strong>Time:</strong> 8:00 PM</p>
+                </div>
+                <div class="detail-card">
+                    <h3>Bed Time</h3>
+                    <p><strong>Time:</strong> 12:00 AM</p>
+                </div>
+                <div class="detail-card">
+                    <h3>Accommodation</h3>
+                    <p>Prices at venue:</p>
+                    <ul>
+                        <li>1 Person - Double Room - £110</li>
+                        <li>2 People - Double Room - £120</li>
+                    </ul>
+                </div>
+        
+            </div>
+        </div>
+    </section>
+
+    <section id="rsvp" class="rsvp">
+        <div class="container">
+            <h2>RSVP</h2>
+            <p>Please let us know if you'll be joining us by [RSVP Date].</p>
+            <form id="rsvp-form" class="rsvp-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="attending">Will you be attending?</label>
+                    <select id="attending" name="attending" required>
+                        <option value="">Select</option>
+                        <option value="yes">Yes, I'll be there!</option>
+                        <option value="no">Sorry, I can't make it</option>
+                    </select>
+                </div>
+                <div class="form-group" id="guests-group" style="display: none;">
+                    <label for="guests">Number of guests (including yourself)</label>
+                    <input type="number" id="guests" name="guests" min="1" max="5">
+                </div>
+                <div class="form-group" id="food-group" style="display: none;">
+                    <label>Dietry Requirements</label>
+                    <div class="food-options">
+                        <label><input type="radio" name="diet" value="none"> No restrictions</label>
+                        <label><input type="radio" name="diet" value="vegetarian"> Vegetarian</label>
+                        <label><input type="radio" name="diet" value="vegan"> Vegan</label>
+                        <label><input type="radio" name="diet" value="gluten-free"> Gluten-free</label>
+                        <label><input type="radio" name="diet" value="other"> Other: <input type="text" name="diet-other"></label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message (optional)</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                <button type="submit" class="submit-button">Submit RSVP</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="food">
+        <div class="container">
+            <h2>Food & Drink</h2>
+            <p>We will be serving a delicious wedding breakfast followed by an evening buffet. Please let us know your preferences using the below form</p>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfm6435slQD8VL9OI62JkQZ-B-JOMZ674UCSh1p_5Pdo4uoOg/viewform?embedded=true" width="640" height="658" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+    </section>
+
+    <section id="registry" class="registry">
+        <div class="container">
+            <h2>Registry</h2>
+            <p>Your presence is our greatest gift, but if you'd like to give something special, we've registered at Amazon, or if you'd rather support in funding our honeymoon, please see the links below.</p>
+            <div class="registry-links">
+                <a href="#" class="registry-link">Amazon Registry</a>
+                <a href="#" class="registry-link">Honeymoon Donation</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Our Story</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/first-date.jpg" alt="Our first date" onerror="this.src='https://via.placeholder.com/300x200?text=First+Date'">
+                    <p>Our first date</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/family.JPG" alt="The best bits" onerror="this.src='https://via.placeholder.com/300x200?text=Engagement'">
+                    <p>The best bits</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/proposal.JPG" alt="Proposal" onerror="this.src='https://via.placeholder.com/300x200?text=Proposal'">
+                    <p>The proposal</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/us.JPG" alt="Together" onerror="this.src='https://via.placeholder.com/300x200?text=Together'">
+                    <p>Just us</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Matthew & Sapphir. Made with love.</p>
+        </div>
+    </footer>
+</body>
+</html>

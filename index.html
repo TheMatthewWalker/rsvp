@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sapphir &amp; Matthew — Wedding Day</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&family=Jost:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles2.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <script type="module" src="script2.js" defer></script>
+</head>
+<body>
+
+<!-- Petal Canvas -->
+<canvas id="petal-canvas"></canvas>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <button id="lightbox-close">✕ Close</button>
+  <img id="lightbox-img" src="" alt="" />
+</div>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="#intro">Introduction</a>
+  <a href="#info">Key Information</a>
+  <a href="#timeline">The Day</a>
+  <a href="#venue">Venue</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#travel">Travel</a>
+  <a href="#rsvp">RSVP</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ornament"></div>
+  <div class="hero-ornament"></div>
+  <div class="hero-ornament"></div>
+  <div class="hero-content">
+    <p class="hero-date-tag">Together Forever</p>
+    <h1 class="hero-names">
+      Sapphir
+      <span>&amp;</span>
+      Matthew
+    </h1>
+    <div class="hero-divider"><span class="hero-divider-icon">✦</span></div>
+    <p class="hero-date">20th February, 2027</p>
+  </div>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- INTRODUCTION -->
+<section id="intro">
+  <span class="section-label reveal">Introduction</span>
+  <h2 class="section-title reveal">We're glad you're here!</h2>
+  <div class="section-rule reveal"></div>
+  <div class="story-grid">
+    <div class="story-image-wrap reveal">
+      <img src="images/us.JPG" alt="Couple photo" />
+    </div>
+    <div class="story-text reveal">
+      <blockquote class="story-quote">"We're getting married!"</blockquote>
+      <p>It only took 10 years to get here!</p>
+      <p>We can't wait to share this special day with all of you!</p>
+    </div>
+  </div>
+</section>
+
+<!-- KEY INFORMATION -->
+<section id="info">
+  <span class="section-label reveal">Key Information</span>
+  <h2 class="section-title reveal">What you need to know.</h2>
+  <div class="section-rule reveal"></div>
+  <div class="info-cards">
+
+    <div class="info-card reveal">
+      <span class="icon"></span>
+      <h3>Dress Code</h3>
+      <p>Formal attire is requested for the ceremony and reception.</p>
+    </div>
+
+    <div class="info-card reveal">
+      <span class="icon"></span>
+      <h3>Payments</h3>
+      <p>The venue is cashless so please ensure you have a card with you if you wish to purchase drinks.</p>
+    </div>
+
+  </div>
+  
+  <div class="info-cards">
+
+    <div class="info-card reveal">
+      <span class="icon"></span>
+      <h3>Gifts</h3>
+      <p>Your presence is our greatest gift, but if you'd like to give something special, we've registered at Amazon, or if you'd rather support in funding our honeymoon, please see the links below.</p>
+       <p><a href="#" class="registry-link">Amazon Registry</a></p>
+       <p><a href="#" class="registry-link">Honeymoon Donation</a></p>
+    </div>
+
+    <div class="info-card reveal">
+      <span class="icon"></span>
+      <h3>Menu</h3>
+      <p>There are two choices available for each course of the wedding breakfast.</p>
+      <p><strong>Starters:</strong> French Onion & Mascarpone Soup OR Cajun Chicken Thigh</p>
+      <p><strong>Main Courses:</strong> Slow-Roasted Beef Shin with Potato Rosti and Seasonal Veg OR Roast Chicken with Seasonal Veg and Yorkshire Pudding</p>
+      <p><strong>Desserts:</strong> Sticky Toffee Pudding OR Lemon Tarte with Raspberry Sorbet</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- TIMELINE / ORDER OF THE DAY -->
+<section id="timeline">
+  <span class="section-label reveal">Order of the Day</span>
+  <h2 class="section-title reveal">The Day Unfolds</h2>
+  <div class="section-rule reveal"></div>
+  <div class="timeline-wrap">
+
+    <div class="timeline-item reveal">
+      <div class="tl-content">
+        <h3>Morning</h3>
+        <p>Guests Arrive</p>
+        <p class="tl-time">11:30 AM</p>
+      </div>
+      <div class="tl-center"><div class="tl-dot"></div><div class="tl-line"></div></div>
+      <div class="tl-empty"></div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="tl-empty"></div>
+      <div class="tl-center"><div class="tl-dot"></div><div class="tl-line"></div></div>
+      <div class="tl-content">
+        <h3>Ceremony</h3>
+        <p>Wedding Ceremony</p>
+        <p class="tl-time">12:00 PM</p>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="tl-content">
+        <h3>Drinks</h3>
+        <p>Drinks &amp; Canapés Reception</p>
+        <p class="tl-time">1:00 PM</p>
+      </div>
+      <div class="tl-center"><div class="tl-dot"></div><div class="tl-line"></div></div>
+      <div class="tl-empty"></div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="tl-empty"></div>
+      <div class="tl-center"><div class="tl-dot"></div><div class="tl-line"></div></div>
+      <div class="tl-content">
+        <h3>Wedding Breakfast</h3>
+        <p>Formal Sit-Down Meal</p>
+        <p class="tl-time">3:00 PM</p>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="tl-content">
+        <h3>Evening</h3>
+        <p>Evening Guests Arrive</p>
+        <p class="tl-time">7:00 PM</p>
+      </div>
+      <div class="tl-center"><div class="tl-dot"></div><div class="tl-line"></div></div>
+      <div class="tl-empty"></div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="tl-empty"></div>
+      <div class="tl-center"><div class="tl-dot"></div></div>
+      <div class="tl-content">
+        <h3>Dancing</h3>
+        <p>First Dance &amp; Evening Celebrations</p>
+        <p class="tl-time">8:00 PM</p>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="tl-empty"></div>
+      <div class="tl-center"><div class="tl-dot"></div></div>
+      <div class="tl-content">
+        <h3>Evening Buffet</h3>
+        <p>Buffet Food Served</p>
+        <p class="tl-time">8:30 PM</p>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="tl-empty"></div>
+      <div class="tl-center"><div class="tl-dot"></div></div>
+      <div class="tl-content">
+        <h3>Departure</h3>
+        <p>Guests must depart by this time</p>
+        <p class="tl-time">12:00 AM</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- VENUE -->
+<section id="venue">
+  <span class="section-label reveal">Where to Find Us</span>
+  <h2 class="section-title reveal">The Venue</h2>
+  <div class="section-rule reveal"></div>
+  <div class="venue-grid">
+    <div class="venue-card reveal">
+      <img src="https://static.wixstatic.com/media/e95dd4_90025728590f47f1a8082e63bdbc4568~mv2.jpg/v1/fill/w_735,h_1406,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e95dd4_90025728590f47f1a8082e63bdbc4568~mv2.jpg" alt="Hellerby Hall" />
+      <div class="venue-card-body">
+        <span class="venue-tag">Ceremony &amp; Reception</span>
+        <h3>Hellaby Hall</h3>
+        <p>A 17th Century manor house, nestled amidst picturesque gardens, thoughtfully transformed into a remarkable 4-star hotel.</p>
+        <div class="venue-address">📍 Hellaby Hall Rd, Hellaby, Bramley, Rotherham S66, UK</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- GALLERY -->
+<section id="gallery">
+  <span class="section-label reveal">Memories</span>
+  <h2 class="section-title reveal">Our Gallery</h2>
+  <div class="section-rule reveal" style="background:var(--gold-dark);"></div>
+  <div class="gallery-grid">
+    <div class="gallery-item tall" data-src="https://images.unsplash.com/photo-1519741347686-c1e0aadf4611?w=800&q=85">
+      <img src="https://images.unsplash.com/photo-1519741347686-c1e0aadf4611?w=600&q=75" alt="Gallery" loading="lazy" />
+    </div>
+    <div class="gallery-item" data-src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&q=85">
+      <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=400&q=75" alt="Gallery" loading="lazy" />
+    </div>
+    <div class="gallery-item wide" data-src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=1000&q=85">
+      <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=700&q=75" alt="Gallery" loading="lazy" />
+    </div>
+    <div class="gallery-item" data-src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=85">
+      <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=400&q=75" alt="Gallery" loading="lazy" />
+    </div>
+    <div class="gallery-item" data-src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=800&q=85">
+      <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=400&q=75" alt="Gallery" loading="lazy" />
+    </div>
+    <div class="gallery-item tall" data-src="https://images.unsplash.com/photo-1529636798458-92182e662485?w=800&q=85">
+      <img src="https://images.unsplash.com/photo-1529636798458-92182e662485?w=600&q=75" alt="Gallery" loading="lazy" />
+    </div>
+    <div class="gallery-item wide" data-src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=1000&q=85">
+      <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=700&q=75" alt="Gallery" loading="lazy" />
+    </div>
+    <div class="gallery-item" data-src="https://images.unsplash.com/photo-1550005809-91ad75fb315f?w=800&q=85">
+      <img src="https://images.unsplash.com/photo-1550005809-91ad75fb315f?w=400&q=75" alt="Gallery" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<!-- TRAVEL & STAY -->
+<section id="travel">
+  <span class="section-label reveal">Getting Here</span>
+  <h2 class="section-title reveal">Travel &amp; Accommodation</h2>
+  <div class="section-rule reveal"></div>
+  <div class="info-cards">
+    <div class="info-card reveal">
+      <span class="icon">🚗</span>
+      <h3>By Car</h3>
+      <p>The hotel can be found just off the M18 (J1) and there is free on-site parking available.</p>
+      <p><br /><a href="https://maps.app.goo.gl/EjJSj2B9nMqCHKqh7" target="_blank" rel="noopener noreferrer">View on Google Maps →</a></p>
+    </div>
+    <div class="info-card reveal">
+      <span class="icon">🚂</span>
+      <h3>By Train</h3>
+      <p>The nearest train station is <strong>Rotherham Central</strong>, approximately 15 minutes away by car.</p>
+      <p><br /><a href="https://www.nationalrail.co.uk/" target="_blank" rel="noopener noreferrer">National Rail →</a></p>
+    </div>
+    <div class="info-card reveal">
+      <span class="icon">🏨</span>
+      <h3>Where to Stay</h3>
+      <p>There are rooms available at our venue, <strong>Hellaby Hall</strong>. Please quote <strong>Sapphir &amp; Matthew's Wedding</strong> when booking to receive the group rate.</p>
+      <p><br /><a href="https://www.hellabyhallhotel.co.uk/" target="_blank" rel="noopener noreferrer">Book here →</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- RSVP -->
+<section id="rsvp">
+  <span class="section-label reveal">Kindly Reply By 1st Dec 2026</span>
+  <h2 class="section-title reveal">Will you join us?</h2>
+  <div class="section-rule reveal" style="background:var(--gold-dark);"></div>
+
+  <div class="rsvp-form-wrap reveal">
+    <p class="rsvp-intro">Please complete the form below to let us know if you'll be celebrating with us, and your choice of meal. We look forward to sharing our special day with you.</p>
+
+    <!-- SUCCESS MESSAGE (shown after submit) -->
+    <div id="rsvp-success">
+      <h3>Thank you so much!</h3>
+      <p>Your RSVP has been received. We cannot wait to celebrate with you.<br /><br />We'll be in touch with any further details closer to the day.</p>
+    </div>
+
+    <!--
+      =====================================================================
+      FORMSPREE SETUP
+      =====================================================================
+    -->
+    <form id="rsvp-form" action="https://formspree.io/f/mojnnevz" method="POST">
+
+      <!-- Primary Guest -->
+      <div class="guest-rows" id="guest-rows">
+        <div class="guest-row" id="guest-1">
+          <p class="guest-row-title">YOUR DETAILS</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first_name">First Name</label>
+              <input type="text" id="first_name" name="first_name" placeholder="Jane" required />
+            </div>
+            <div class="form-group">
+              <label for="last_name">Last Name</label>
+              <input type="text" id="last_name" name="last_name" placeholder="Smith" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+44 7700 000000" />
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom:1.25rem;">
+            <label>Attending?</label>
+            <div class="radio-group">
+              <input type="radio" id="attending_yes" name="attending" value="Yes" required />
+              <label for="attending_yes">Joyfully Accepts</label>
+              <input type="radio" id="attending_no" name="attending" value="No" />
+              <label for="attending_no">Regretfully Declines</label>
+            </div>
+          </div>
+
+          <div class="form-row" id="meal-section-1">
+            <div class="form-group">
+              <label for="starter_1">Starter</label>
+              <select id="starter_1" name="guest_1_starter">
+                <option value="">— Select Starter —</option>
+                <option value="Soup">French Onion & Mascarpone Soup</option>
+                <option value="Prawn">Cajun Chicken Thigh</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="main_1">Main Course</label>
+              <select id="main_1" name="guest_1_main">
+                <option value="">— Select Main —</option>
+                <option value="Beef">Slow-Roasted Beef Shin with Potato Rosti and Seasonal Veg</option>
+                <option value="Chicken">Roast Chicken with Seasonal Veg and Yorkshire Pudding</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="dessert_1">Dessert</label>
+              <select id="dessert_1" name="guest_1_dessert">
+                <option value="">— Select Dessert —</option>
+                <option value="Sticky Toffe Pudding">Sticky Toffee Pudding</option>
+                <option value="Trio of Desserts">Trio of Desserts</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom:1rem;">
+            <label for="dietary_1">Dietary Requirements / Allergies</label>
+            <input type="text" id="dietary_1" name="guest_1_dietary" placeholder="e.g. Nut allergy, vegetarian, gluten free..." />
+          </div>
+        </div>
+      </div>
+
+      <!-- Add Another Guest   
+      <button type="button" class="btn-add-guest" id="btn-add-guest">+ Add Additional Guest</button>  -->
+
+      <!-- Additional info -->
+      <div class="form-group" style="margin-bottom:1.5rem;">
+        <label for="song">Song Request 🎵</label>
+        <input type="text" id="song" name="song_request" placeholder="What song will get you on the dance floor?" />
+      </div>
+
+      <div class="form-group" style="margin-bottom:2rem;">
+        <label for="message">Message for the Happy Couple</label>
+        <textarea id="message" name="message" placeholder="Share your wishes, a memory, or just say hello..."></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn"><span>Send RSVP</span></button>
+      <p class="form-note">
+        If you have any issues with this form please contact us at <a href="mailto:walker3012@gmail.com">walker3012@gmail.com</a><br />
+        RSVP deadline: 1st Dec 2026
+      </p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p class="footer-names">Sapphir &amp; Matthew</p>
+  <p class="footer-date">20 · 02 · 2027</p>
+  <p>Made with love ♡</p>
+</footer>
+
+</body>
+</html>
