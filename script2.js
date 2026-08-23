@@ -144,33 +144,6 @@
 })();
 
 /* ================================================================
-   4. GALLERY LIGHTBOX
-================================================================ */
-(function() {
-  const lightbox = document.getElementById('lightbox');
-  const lbImg    = document.getElementById('lightbox-img');
-  const lbClose  = document.getElementById('lightbox-close');
-
-  document.querySelectorAll('.gallery-item').forEach(item => {
-    item.addEventListener('click', () => {
-      lbImg.src = item.dataset.src;
-      lightbox.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    });
-  });
-
-  function close() {
-    lightbox.classList.remove('open');
-    document.body.style.overflow = '';
-    lbImg.src = '';
-  }
-
-  lbClose.addEventListener('click', close);
-  lightbox.addEventListener('click', e => { if (e.target === lightbox) close(); });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
-})();
-
-/* ================================================================
    5. DYNAMIC GUEST ROWS
 ================================================================ */
 (function() {
