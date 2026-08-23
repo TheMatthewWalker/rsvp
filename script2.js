@@ -97,9 +97,9 @@
 (function() {
   let guestCount = 1;
 
-  const STARTERS  = ['— Select Starter —', 'French Onion & Marscapone Soup', 'Cajun Chicken Thigh',];
+  const STARTERS  = ['— Select Starter —', 'French Onion & Marscapone Soup', 'Ham Hock Terrine',];
   const MAINS     = ['— Select Main —', 'Slow-Roasted Beef Shin with Potato Rosti', 'Roast Chicken with Seasonal Veg and Yorkshire Pudding'];
-  const DESSERTS  = ['— Select Dessert —', 'Sticky Toffee Pudding', 'Trio of Desserts'];
+  const DESSERTS  = ['— Select Dessert —', 'Sticky Toffee Pudding', 'Lemon Tarte with Raspberry Sorbet'];
   const MAIN_VALS = ['', 'Beef', 'Chicken'];
   const STRT_VALS = ['', 'Soup', 'Thigh'];
   const DSSR_VALS = ['', 'Toffee', 'Trio'];
