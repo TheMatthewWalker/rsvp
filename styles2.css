@@ -233,68 +233,6 @@
       transform: translateY(0);
     }
 
-    /* Story image — slides in from the left, slides back out when scrolled away 
-    .story-image-wrap.reveal {
-      transform: translateX(-80px);
-      opacity: 0;
-      transition: opacity 0.85s ease, transform 0.85s cubic-bezier(0.25, 0.8, 0.25, 1);
-    }
-    .story-image-wrap.reveal.visible {
-      transform: translateX(0);
-      opacity: 1;
-    } */
-
-    /* ============================================================
-       OUR STORY
-    ============================================================ */
-    #story {
-      background: var(--ivory);
-    }
-    .story-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      max-width: 1000px;
-      margin: 0 auto;
-      align-items: center;
-    }
-    .story-image-wrap {
-      position: relative;
-    }
-    .story-image-wrap::before {
-      content: '';
-      position: absolute;
-      top: -20px; left: -20px;
-      right: 20px; bottom: 20px;
-      border: 1px solid var(--gold-light);
-      z-index: 0;
-    }
-    .story-image-wrap img {
-      width: 100%;
-      aspect-ratio: 3/4;
-      object-fit: cover;
-      display: block;
-      position: relative;
-      z-index: 1;
-      filter: sepia(15%) contrast(1.02);
-    }
-    .story-text p {
-      font-size: 1.05rem;
-      line-height: 1.9;
-      color: var(--warm-grey);
-      margin-bottom: 1.5rem;
-    }
-    .story-text .story-quote {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-size: 1.6rem;
-      color: var(--gold-dark);
-      line-height: 1.4;
-      margin: 2rem 0;
-      padding-left: 1.5rem;
-      border-left: 2px solid var(--gold-light);
-    }
-
     /* ============================================================
        TIMELINE
     ============================================================ */
@@ -459,67 +397,6 @@
       letter-spacing: 0.2em;
       color: var(--gold);
       text-transform: uppercase;
-    }
-
-    /* ============================================================
-       GALLERY
-    ============================================================ */
-    #gallery { background: var(--deep); padding: 8rem 1rem; }
-    #gallery .section-title { color: var(--gold-light); }
-    #gallery .section-label { color: var(--gold); }
-    #gallery .section-rule { background: var(--gold-dark); }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-auto-rows: 250px;
-      gap: 4px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .gallery-item {
-      overflow: hidden;
-      cursor: pointer;
-    }
-    .gallery-item.tall { grid-row: span 2; }
-    .gallery-item.wide { grid-column: span 2; }
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.6s ease, filter 0.6s ease;
-      filter: sepia(15%) brightness(0.9);
-    }
-    .gallery-item:hover img { transform: scale(1.06); filter: sepia(5%) brightness(1); }
-
-    /* Lightbox */
-    #lightbox {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(20,16,12,0.96);
-      z-index: 200;
-      align-items: center;
-      justify-content: center;
-    }
-    #lightbox.open { display: flex; }
-    #lightbox img {
-      max-width: 90vw;
-      max-height: 90vh;
-      object-fit: contain;
-      border: 1px solid rgba(201,169,110,0.3);
-    }
-    #lightbox-close {
-      position: absolute;
-      top: 1.5rem; right: 2rem;
-      font-family: 'Cinzel', serif;
-      font-size: 0.8rem;
-      letter-spacing: 0.2em;
-      color: var(--gold);
-      cursor: pointer;
-      background: none;
-      border: 1px solid rgba(201,169,110,0.4);
-      padding: 0.5rem 1rem;
     }
 
     /* ============================================================
@@ -802,14 +679,16 @@
        RESPONSIVE
     ============================================================ */
     @media (max-width: 900px) {
-      .story-grid, .venue-grid, .info-cards { grid-template-columns: 1fr; }
-      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-      .gallery-item.wide { grid-column: span 1; }
+      .venue-grid, .info-cards, .info-cards2 { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
       .rsvp-form-wrap { padding: 2rem 1.5rem; }
+      nav {
+        flex-wrap: wrap;
+        gap: 0.7rem 1.4rem;
+        padding: 1rem 1.2rem;
+      }
     }
     @media (max-width: 600px) {
-      nav { gap: 1.2rem; }
+      nav { gap: 0.6rem 1rem; }
       nav a { font-size: 0.58rem; }
-      .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 180px; }
     }
