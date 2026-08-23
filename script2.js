@@ -88,59 +88,7 @@
     });
   }, { threshold: 0.12 });
 
-  document.querySelectorAll('.reveal:not(.story-image-wrap), .party-card').forEach(el => observer.observe(el));
-
-  // Scroll-driven animation for the story image
-  // Position and opacity are set directly based on scroll progress —
-  // so stopping mid-scroll leaves it exactly mid-animation.
-  const storyImg = document.querySelector('.story-image-wrap.reveal');
-  if (storyImg) {
-    // Remove the reveal class so our CSS transition doesn't fight with scroll JS
-    storyImg.classList.remove('reveal');
-    storyImg.style.opacity = '0';
-    storyImg.style.transform = 'translateX(-80px)';
-    storyImg.style.transition = 'none'; // We're setting values directly, no CSS transition
-
-    function updateStoryImg() {
-      const rect = storyImg.getBoundingClientRect();
-      const windowH = window.innerHeight;
-
-      // --- Slide IN ---
-      // Slide finishes when image top reaches 30% down the screen
-      const inStart = windowH * 1;             // animation begins: image just entering from bottom
-      const inEnd   = windowH * 0.3;           // animation ends: image settled at 30% from top
-      const inProgress = Math.min(1, Math.max(0, (inStart - rect.top) / (inStart - inEnd)));
-
-      // --- Slide OUT ---
-      // Slide out begins when image top is well above the screen (-20% of image height)
-      const outStart = -rect.height * 0.3;  // starts leaving late — image mostly off top
-      const outEnd   = -rect.height * 1;  // fully gone
-      const outProgress = Math.min(1, Math.max(0, (outStart - rect.top) / (outStart - outEnd)));
-
-      let slideProgress, opacityProgress;
-
-      if (rect.top > outStart) {
-        // Coming in from bottom or fully visible
-        slideProgress = inProgress;
-      } else {
-        // Scrolling off the top
-        slideProgress = 1 - outProgress;
-      }
-
-      // Opacity uses its own faster curve — reaches full opacity in the first 20% of the slide,
-      // and fades out in the first 20% of the slide out
-      opacityProgress = rect.top > outStart
-        ? Math.min(1, inProgress / 0.2)          // fade in fast during first 20% of slide in
-        : Math.max(0, (1 - outProgress / 0.2));  // fade out fast during first 20% of slide out
-
-      const translateX = -80 * (1 - slideProgress);
-      storyImg.style.transform = `translateX(${translateX}px)`;
-      storyImg.style.opacity   = Math.min(1, Math.max(0, opacityProgress));
-    }
-
-    window.addEventListener('scroll', updateStoryImg, { passive: true });
-    updateStoryImg(); // run once on load in case already in view
-  }
+  document.querySelectorAll('.reveal, .party-card').forEach(el => observer.observe(el));
 })();
 
 /* ================================================================

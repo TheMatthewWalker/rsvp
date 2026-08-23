@@ -233,68 +233,6 @@
       transform: translateY(0);
     }
 
-    /* Story image — slides in from the left, slides back out when scrolled away 
-    .story-image-wrap.reveal {
-      transform: translateX(-80px);
-      opacity: 0;
-      transition: opacity 0.85s ease, transform 0.85s cubic-bezier(0.25, 0.8, 0.25, 1);
-    }
-    .story-image-wrap.reveal.visible {
-      transform: translateX(0);
-      opacity: 1;
-    } */
-
-    /* ============================================================
-       OUR STORY
-    ============================================================ */
-    #story {
-      background: var(--ivory);
-    }
-    .story-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      max-width: 1000px;
-      margin: 0 auto;
-      align-items: center;
-    }
-    .story-image-wrap {
-      position: relative;
-    }
-    .story-image-wrap::before {
-      content: '';
-      position: absolute;
-      top: -20px; left: -20px;
-      right: 20px; bottom: 20px;
-      border: 1px solid var(--gold-light);
-      z-index: 0;
-    }
-    .story-image-wrap img {
-      width: 100%;
-      aspect-ratio: 3/4;
-      object-fit: cover;
-      display: block;
-      position: relative;
-      z-index: 1;
-      filter: sepia(15%) contrast(1.02);
-    }
-    .story-text p {
-      font-size: 1.05rem;
-      line-height: 1.9;
-      color: var(--warm-grey);
-      margin-bottom: 1.5rem;
-    }
-    .story-text .story-quote {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-size: 1.6rem;
-      color: var(--gold-dark);
-      line-height: 1.4;
-      margin: 2rem 0;
-      padding-left: 1.5rem;
-      border-left: 2px solid var(--gold-light);
-    }
-
     /* ============================================================
        TIMELINE
     ============================================================ */
@@ -741,7 +679,7 @@
        RESPONSIVE
     ============================================================ */
     @media (max-width: 900px) {
-      .story-grid, .venue-grid, .info-cards, .info-cards2 { grid-template-columns: 1fr; }
+      .venue-grid, .info-cards, .info-cards2 { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
       .rsvp-form-wrap { padding: 2rem 1.5rem; }
       nav {
