@@ -101,7 +101,7 @@
   const MAINS     = ['— Select Main —', 'Slow-Roasted Beef Shin with Potato Rosti', 'Roast Chicken with Seasonal Veg and Yorkshire Pudding'];
   const DESSERTS  = ['— Select Dessert —', 'Sticky Toffee Pudding', 'Lemon Tarte with Raspberry Sorbet'];
   const MAIN_VALS = ['', 'Beef', 'Chicken'];
-  const STRT_VALS = ['', 'Soup', 'Thigh'];
+  const STRT_VALS = ['', 'Soup', 'Terrine'];
   const DSSR_VALS = ['', 'Toffee', 'Trio'];
 
   function buildSelect(name, options, values) {
