@@ -78,7 +78,7 @@
       <h3>Menu</h3>
       <p>There are two choices available for each course of the wedding breakfast.</p>
       <p><strong>Starters:</strong> Onion, Bacon & Mascarpone Soup OR Ham Hock Terrine</p>
-      <p><strong>Main Courses:</strong> Slow-Roasted Beef Shin with Bubble & Squeak and Seasonal Veg OR Roast Chicken with Seasonal Veg and Yorkshire Pudding</p>
+      <p><strong>Main Courses:</strong> Slow-Roasted Beef Shin with Bubble & Squeak OR Roast Chicken with Seasonal Veg and Yorkshire Pudding</p>
       <p><strong>Desserts:</strong> Sticky Toffee Pudding OR Lemon Tarte with Raspberry Sorbet</p>
     </div>
   </div>
@@ -278,36 +278,38 @@
             </div>
           </div>
 
-          <div class="form-row" id="meal-section-1">
-            <div class="form-group">
-              <label for="starter_1">Starter</label>
-              <select id="starter_1" name="guest_1_starter">
-                <option value="">— Select Starter —</option>
-                <option value="Soup">Onion, Bacon & Mascarpone Soup</option>
-                <option value="Terrine">Ham Hock Terrine</option>
-              </select>
+          <div id="meal-fields-1">
+            <div class="form-row" id="meal-section-1">
+              <div class="form-group">
+                <label for="starter_1">Starter</label>
+                <select id="starter_1" name="guest_1_starter">
+                  <option value="">— Select Starter —</option>
+                  <option value="Soup">Onion, Bacon & Mascarpone Soup</option>
+                  <option value="Terrine">Ham Hock Terrine</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="main_1">Main Course</label>
+                <select id="main_1" name="guest_1_main">
+                  <option value="">— Select Main —</option>
+                  <option value="Beef">Slow-Roasted Beef Shin with Bubble & Squeak</option>
+                  <option value="Chicken">Roast Chicken with Seasonal Veg and Yorkshire Pudding</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="dessert_1">Dessert</label>
+                <select id="dessert_1" name="guest_1_dessert">
+                  <option value="">— Select Dessert —</option>
+                  <option value="Sticky Toffe Pudding">Sticky Toffee Pudding</option>
+                  <option value="Lemon Tarte with Raspberry Sorbet">Lemon Tarte with Raspberry Sorbet</option>
+                </select>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="main_1">Main Course</label>
-              <select id="main_1" name="guest_1_main">
-                <option value="">— Select Main —</option>
-                <option value="Beef">Slow-Roasted Beef Shin with Bubble & Squeak and Seasonal Veg</option>
-                <option value="Chicken">Roast Chicken with Seasonal Veg and Yorkshire Pudding</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="dessert_1">Dessert</label>
-              <select id="dessert_1" name="guest_1_dessert">
-                <option value="">— Select Dessert —</option>
-                <option value="Sticky Toffe Pudding">Sticky Toffee Pudding</option>
-                <option value="Lemon Tarte with Raspberry Sorbet">Lemon Tarte with Raspberry Sorbet</option>
-              </select>
-            </div>
-          </div>
 
-          <div class="form-group" style="margin-bottom:1rem;">
-            <label for="dietary_1">Dietary Requirements / Allergies</label>
-            <input type="text" id="dietary_1" name="guest_1_dietary" placeholder="e.g. Nut allergy, vegetarian, gluten free..." />
+            <div class="form-group" style="margin-bottom:1rem;">
+              <label for="dietary_1">Dietary Requirements / Allergies</label>
+              <input type="text" id="dietary_1" name="guest_1_dietary" placeholder="e.g. Nut allergy, vegetarian, gluten free..." />
+            </div>
           </div>
         </div>
       </div>
