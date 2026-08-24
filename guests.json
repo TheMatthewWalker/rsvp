@@ -26,16 +26,20 @@
         {"firstname": "Faye-Olivia", "lastname": "Froment"},
         {"firstname": "Julien", "lastname": "Froment"},
         {"firstname": "Nina", "lastname": "Froment"},
-        {"firstname": "Sophie", "lastname": "Mosley"},
+        {"firstname": "Sophie", "lastname": "Moseley"},
         {"firstname": "Louis", "lastname": "Hunter"},
         {"firstname": "Emily", "lastname": "Dowd"},
         {"firstname": "Georgie", "lastname": "Mahoney"},
         {"firstname": "Anna", "lastname": "Bowgett"},
         {"firstname": "James", "lastname": "Gordon"},
-        {"firstname": "Anna", "lastname": ""},
+        {"firstname": "Anna", "lastname": "Olejarz"},
         {"firstname": "Chloe", "lastname": "Rilett"},
         {"firstname": "Sarah", "lastname": "Edwards"},
         {"firstname": "Nigel", "lastname": "Edwards"},
-        {"firstname": "Shirley", "lastname": "Green"}
+        {"firstname": "Shirley", "lastname": "Green"},
+        {"firstname": "Ron", "lastname": "Gutteridge"},
+        {"firstname": "Diane", "lastname": "Gutteridge"},
+        {"firstname": "Michael", "lastname": "Knighton"},
+        {"firstname": "Rachael", "lastname": "Knighton"}
     ]
 }
