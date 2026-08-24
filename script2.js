@@ -195,6 +195,23 @@
 })();
 
 /* ================================================================
+   5b. RSVP DECLINE TOGGLE
+================================================================ */
+(function() {
+  const mealFields = document.getElementById('meal-fields-1');
+  const attendingRadios = document.querySelectorAll('input[name="attending"]');
+  if (!mealFields || !attendingRadios.length) return;
+
+  function updateMealFields() {
+    const declined = document.getElementById('attending_no').checked;
+    mealFields.style.display = declined ? 'none' : '';
+  }
+
+  attendingRadios.forEach(radio => radio.addEventListener('change', updateMealFields));
+  updateMealFields();
+})();
+
+/* ================================================================
    6. RSVP FORM SUBMISSION (Formspree)
 ================================================================ */
 
