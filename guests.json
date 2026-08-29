@@ -40,6 +40,8 @@
         {"firstname": "Ron", "lastname": "Gutteridge"},
         {"firstname": "Diane", "lastname": "Gutteridge"},
         {"firstname": "Michael", "lastname": "Knighton"},
-        {"firstname": "Rachael", "lastname": "Knighton"}
+        {"firstname": "Rachael", "lastname": "Knighton"},
+        {"firstname": "Esme", "lastname": "Walters"},
+        {"firstname": "Kayvan", "lastname": "Richter"}
     ]
 }
