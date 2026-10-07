@@ -400,6 +400,10 @@
       max-width: 1000px;
       margin: 0 auto;
     }
+    .info-cards-two {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 760px;
+    }
     .info-card {
       padding: 2.5rem 2rem;
       background: var(--ivory);

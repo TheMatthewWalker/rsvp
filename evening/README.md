@@ -8,7 +8,7 @@ need to know.
 ## Sections
 
 1. **Hero** — names, date and evening start time
-2. **Key Information** — dress code, cashless venue, gifts / honeymoon fund
+2. **Key Information** — cashless venue, gifts / honeymoon fund
 3. **The Evening** — timeline from 7:00 PM arrival to midnight departure
 4. **Venue** — Hellaby Hall details, address and directions
 5. **Travel & Accommodation** — car, train and hotel booking info
