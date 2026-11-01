@@ -22,6 +22,7 @@
   <a href="#timeline">The Evening</a>
   <a href="#venue">Venue</a>
   <a href="#travel">Travel</a>
+  <a href="#rsvp">RSVP</a>
 </nav>
 
 <!-- HERO -->
@@ -53,7 +54,7 @@
   <h2 class="section-title reveal">What you need to know.</h2>
   <div class="section-rule reveal"></div>
 
-  <div class="info-cards info-cards-two">
+  <div class="info-cards">
     <div class="info-card reveal">
       <span class="icon">💳</span>
       <h3>Payments</h3>
@@ -65,6 +66,13 @@
       <h3>Gifts</h3>
       <p>Your presence is our greatest gift, but if you'd like to give something special, please consider supporting our honeymoon fund via the link below.</p>
       <p><br /><a href="https://paypal.me/MathWalker" target="_blank" rel="noopener noreferrer">Honeymoon Donation →</a></p>
+    </div>
+
+    <div class="info-card reveal">
+      <span class="icon">🧸</span>
+      <h3>Children</h3>
+      <p>We love your little ones, but we kindly ask that you leave children at home with family for the evening so everyone can relax and celebrate with us.</p>
+      <p><br />You will see a few young children on the night — they are our direct family and part of the wedding party. Thank you for understanding.</p>
     </div>
   </div>
 </section>
@@ -163,6 +171,58 @@
       <p>There are rooms available at our venue, <strong>Hellaby Hall</strong>. Please quote <strong>Sapphir &amp; Matthew's Wedding</strong> when booking to receive the group rate.</p>
       <p><br /><a href="https://www.hellabyhallhotel.co.uk/" target="_blank" rel="noopener noreferrer">Book here →</a></p>
     </div>
+  </div>
+</section>
+
+<!-- RSVP -->
+<section id="rsvp">
+  <span class="section-label reveal">Kindly Reply</span>
+  <h2 class="section-title reveal">Will you join us?</h2>
+  <div class="section-rule reveal"></div>
+
+  <div class="rsvp-form-wrap reveal">
+    <p class="rsvp-intro">Please let us know whether you can make it, and the names of anyone joining you.</p>
+
+    <div id="rsvp-success" role="status" hidden>
+      <h3>Thank you!</h3>
+      <p>Your RSVP has been received. We can't wait to celebrate with you.</p>
+    </div>
+
+    <form id="rsvp-form" action="https://formspree.io/f/xeaarbpn" method="POST">
+      <input type="hidden" name="_subject" value="Evening RSVP" />
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="first_name">First Name</label>
+          <input type="text" id="first_name" name="first_name" autocomplete="given-name" required />
+        </div>
+        <div class="form-group">
+          <label for="last_name">Last Name</label>
+          <input type="text" id="last_name" name="last_name" autocomplete="family-name" required />
+        </div>
+      </div>
+
+      <div class="form-group form-block">
+        <span class="field-label" id="attending-label">Attending?</span>
+        <div class="radio-group" role="radiogroup" aria-labelledby="attending-label">
+          <input type="radio" id="attending_yes" name="attending" value="Yes" required />
+          <label for="attending_yes">Joyfully Accepts</label>
+          <input type="radio" id="attending_no" name="attending" value="No" />
+          <label for="attending_no">Regretfully Declines</label>
+        </div>
+      </div>
+
+      <div id="plus-ones">
+        <div id="plus-one-rows"></div>
+        <button type="button" class="btn-add-guest" id="btn-add-guest">+ Add a Plus One</button>
+      </div>
+
+      <button type="submit" class="submit-btn"><span>Send RSVP</span></button>
+      <p class="form-error" id="rsvp-error" role="alert" hidden></p>
+      <p class="form-note">
+        Having trouble with the form? Email us at <a href="mailto:walker3012@gmail.com">walker3012@gmail.com</a>
+      </p>
+    </form>
   </div>
 </section>
 

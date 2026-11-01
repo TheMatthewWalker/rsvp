@@ -101,3 +101,101 @@
     });
   });
 })();
+
+/* ================================================================
+   5. RSVP — PLUS ONES
+================================================================ */
+(function() {
+  const MAX_PLUS_ONES = 4;
+  const rows      = document.getElementById('plus-one-rows');
+  const addBtn    = document.getElementById('btn-add-guest');
+  const plusOnes  = document.getElementById('plus-ones');
+  const declined  = document.getElementById('attending_no');
+  let nextId = 1;
+
+  function renumber() {
+    rows.querySelectorAll('.plus-one-row').forEach((row, i) => {
+      row.querySelector('label').textContent = `Plus One ${i + 1} — Full Name`;
+      row.querySelector('input').name = `plus_one_${i + 1}`;
+    });
+    addBtn.hidden = rows.children.length >= MAX_PLUS_ONES;
+  }
+
+  addBtn.addEventListener('click', () => {
+    const id = `plus_one_input_${nextId++}`;
+    const row = document.createElement('div');
+    row.className = 'plus-one-row';
+    row.innerHTML = `
+      <div class="form-group">
+        <label for="${id}"></label>
+        <input type="text" id="${id}" autocomplete="off" required />
+      </div>
+      <button type="button" class="btn-remove-guest" aria-label="Remove plus one">✕</button>`;
+    row.querySelector('.btn-remove-guest').addEventListener('click', () => {
+      row.remove();
+      renumber();
+    });
+    rows.append(row);
+    renumber();
+    row.querySelector('input').focus();
+  });
+
+  // Plus ones only make sense if the guest is coming
+  document.querySelectorAll('input[name="attending"]').forEach(radio => {
+    radio.addEventListener('change', () => {
+      plusOnes.hidden = declined.checked;
+      if (declined.checked) {
+        rows.innerHTML = '';
+        renumber();
+      }
+    });
+  });
+})();
+
+/* ================================================================
+   6. RSVP — SUBMIT (Formspree)
+================================================================ */
+(function() {
+  const form    = document.getElementById('rsvp-form');
+  const success = document.getElementById('rsvp-success');
+  const error   = document.getElementById('rsvp-error');
+  const btn     = form.querySelector('.submit-btn');
+  const label   = btn.querySelector('span');
+
+  function showError(msg) {
+    error.textContent = msg;
+    error.hidden = false;
+    btn.disabled = false;
+    label.textContent = 'Send RSVP';
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    error.hidden = true;
+    btn.disabled = true;
+    label.textContent = 'Sending…';
+
+    const data = new FormData(form);
+    data.append('plus_ones', form.querySelectorAll('.plus-one-row').length);
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        form.hidden = true;
+        success.hidden = false;
+        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        const json = await res.json().catch(() => ({}));
+        const msg = json.errors ? json.errors.map(err => err.message).join(', ') : 'Something went wrong.';
+        showError('Sorry, there was a problem sending your RSVP: ' + msg);
+      }
+    } catch (err) {
+      showError('Network error — please try again, or email us using the address below.');
+    }
+  });
+})();
