@@ -233,7 +233,6 @@
 
   let moves = 0;
   let runner = null;
-  let gameOver = false;
   let answers = [];
 
   // Pick a spot on screen, clear of the nav, well away from the last one
@@ -295,8 +294,9 @@
     note.hidden = false;
   }
 
+  // Every switch to "decline" runs the whole chase and both questions again
   function onDeclineTap(e) {
-    if (gameOver) return; // once caught, it behaves like a normal option
+    if (decline.checked && !runner) return; // already declined: nothing to change
     e.preventDefault();
     if (moves < MAX_MOVES) {
       runAway();
@@ -305,7 +305,8 @@
     runner.remove();
     runner = null;
     declineLabel.style.visibility = '';
-    gameOver = true;
+    moves = 0;
+    answers = [];
     showQuestion();
   }
 
