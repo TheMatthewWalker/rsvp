@@ -2,22 +2,28 @@
 
 An information website for **evening guests** at Sapphir & Matthew's wedding
 (Saturday 20th February 2027, Hellaby Hall). It is the companion to the
-day-guest RSVP site, but with no RSVP form — just everything evening guests
-need to know.
+day-guest RSVP site: everything evening guests need to know, plus a simple
+RSVP form (name, attending, and the names of any plus ones).
 
 ## Sections
 
 1. **Hero** — names, date and evening start time
-2. **Key Information** — cashless venue, gifts / honeymoon fund
+2. **Key Information** — cashless venue, gifts / honeymoon fund, children
 3. **The Evening** — timeline from 7:00 PM arrival to midnight departure
 4. **Venue** — Hellaby Hall details, address and directions
 5. **Travel & Accommodation** — car, train and hotel booking info
+6. **RSVP** — name, attending yes/no, up to 4 plus ones; submitted to Formspree
+   (`https://formspree.io/f/xeaarbpn`) with `fetch`, so guests stay on the page
+   - Just for fun, the **Regretfully Declines** button runs away from the first
+     3 taps (jumping to a random spot on screen). Once caught, two double-negative
+     questions decide what the guest meant; the final answer is selected in the
+     form and spelled out underneath, so they can still change it.
 
 ## Files
 
 - `index.html` — page content
 - `styles.css` — styling (same palette and fonts as the day site, with a darker evening theme)
-- `script.js` — fairy-light animation, nav scroll effect and scroll reveal
+- `script.js` — fairy-light animation, nav scroll effect, scroll reveal and the RSVP form
 
 ## Running locally
 
