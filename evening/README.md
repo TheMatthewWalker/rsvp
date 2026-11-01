@@ -15,7 +15,7 @@ RSVP form (name, attending, and the names of any plus ones).
 6. **RSVP** — name, attending yes/no, up to 4 plus ones; submitted to Formspree
    (`https://formspree.io/f/xeaarbpn`) with `fetch`, so guests stay on the page
    - Just for fun, the **Regretfully Declines** button runs away from the first
-     3 taps (jumping to a random spot on screen). Once caught, two double-negative
+     5 taps (jumping to a random spot on screen). Once caught, two double-negative
      questions decide what the guest meant; the final answer is selected in the
      form and spelled out underneath, so they can still change it.
 

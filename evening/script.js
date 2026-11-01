@@ -207,7 +207,7 @@
    what the guest actually meant.
 ================================================================ */
 (function() {
-  const MAX_MOVES = 3;
+  const MAX_MOVES = 5;
 
   const declineLabel = document.querySelector('label[for="attending_no"]');
   const accept   = document.getElementById('attending_yes');
