@@ -577,6 +577,71 @@
       line-height: 1.6;
     }
     .form-note a { color: rgba(232,213,163,0.7); }
+    /* Runaway decline button + double-negative dialog */
+    .runaway-btn {
+      position: fixed;
+      z-index: 200;
+      padding: 0.85rem 0.5rem;
+      background: var(--deep);
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-family: 'Cinzel', serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.55);
+      cursor: pointer;
+      touch-action: manipulation;
+      transition: left 0.35s cubic-bezier(.3,1.4,.6,1), top 0.35s cubic-bezier(.3,1.4,.6,1);
+    }
+    .attend-note {
+      margin-top: 0.75rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-style: italic;
+      line-height: 1.6;
+      color: var(--gold-light);
+    }
+    .decline-dialog {
+      margin: auto;
+      width: min(420px, calc(100vw - 32px));
+      padding: 2.25rem 1.5rem 1.75rem;
+      background: var(--night);
+      border: 1px solid var(--gold);
+      color: var(--gold-light);
+      text-align: center;
+    }
+    .decline-dialog::backdrop { background: rgba(10, 8, 6, 0.8); }
+    .dialog-step {
+      font-family: 'Cinzel', serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .dialog-question {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-style: italic;
+      line-height: 1.35;
+      margin-bottom: 1.75rem;
+    }
+    .dialog-actions { display: flex; gap: 0.75rem; }
+    .dialog-btn {
+      flex: 1;
+      padding: 0.9rem;
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      cursor: pointer;
+      touch-action: manipulation;
+    }
+    .dialog-btn:hover, .dialog-btn:focus-visible { background: var(--gold); color: var(--deep); }
     #rsvp-success { text-align: center; padding: 1rem 0; }
     #rsvp-success h3 {
       font-family: 'Cormorant Garamond', serif;
@@ -642,6 +707,7 @@
     }
     @media (prefers-reduced-motion: reduce) {
       #lights-canvas { display: none; }
+      .runaway-btn { transition: none; }
     }
 
     /* ============================================================

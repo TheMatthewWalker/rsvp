@@ -210,6 +210,7 @@
           <input type="radio" id="attending_no" name="attending" value="No" />
           <label for="attending_no">Regretfully Declines</label>
         </div>
+        <p class="attend-note" id="attend-note" role="status" hidden></p>
       </div>
 
       <div id="plus-ones">
@@ -224,6 +225,16 @@
       </p>
     </form>
   </div>
+
+  <!-- Shown when someone finally catches the decline button -->
+  <dialog id="decline-dialog" class="decline-dialog" aria-labelledby="decline-question">
+    <p class="dialog-step" id="decline-step"></p>
+    <p class="dialog-question" id="decline-question"></p>
+    <div class="dialog-actions">
+      <button type="button" class="dialog-btn" value="yes">Yes</button>
+      <button type="button" class="dialog-btn" value="no">No</button>
+    </div>
+  </dialog>
 </section>
 
 <!-- FOOTER -->
